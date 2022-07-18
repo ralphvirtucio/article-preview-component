@@ -1,17 +1,23 @@
 .article {
   padding: 5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__container {
     display: flex;
     flex-direction: column;
+    max-width: 20rem;
   }
 
   &__img-container {
-    height: 15.4rem;
-    max-height: 16rem;
+    max-height: 13.5rem;
+    overflow: hidden;
   }
 
   &__img {
     width: 100%;
+    max-width: 100%;
     display: block;
     border-radius: 10px 10px 0 0;
   }

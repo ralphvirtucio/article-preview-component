@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 
   &__container {
     display: flex;
@@ -83,4 +84,5 @@
   border-radius: 80%;
   padding: 0.5rem;
   background-color: var(--clr-prm-light-grayish-blue);
+  cursor: pointer;
 }

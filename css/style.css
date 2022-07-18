@@ -32,6 +32,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 .article__container {
   display: flex;
@@ -102,6 +103,7 @@ body {
   border-radius: 80%;
   padding: 0.5rem;
   background-color: var(--clr-prm-light-grayish-blue);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

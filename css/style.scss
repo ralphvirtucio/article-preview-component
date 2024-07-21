@@ -139,18 +139,31 @@ body {
   margin-block-start: 4.625rem; 
   margin-block-end: 5.5625rem; 
   overflow: hidden;
-  // box-shadow: 0 40px 40px -10px rgba(0,0,0, 0.534);
-  box-shadow: 0  8px 24px rgba(0,0,0, 0.15);
+}
+
+.article__img {
+  position: relative;
+  z-index: -1;
+  transform: translateY(40px);
+
+  img {
+  border-radius: 12px;
+
+  }
 }
 
 .article__container {
   background-color: #fff;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0  8px 24px rgba(0,0,0, 0.15);
 }
 
 .article__content {
   padding-block-start: 2.25rem;
   padding-block-end: 2rem;
   padding-inline: 2rem;
+
 
   h2 {
     font-size: 1rem;

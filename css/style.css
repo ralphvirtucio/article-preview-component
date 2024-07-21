@@ -73,5 +73,117 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article__container {
+  background-color: #fff;
+}
+
+.article__content {
+  padding: 1.5rem 1.5rem;
+}
+.article__content h2 {
+  font-size: 1rem;
+  color: hsl(217, 19%, 35%);
+  margin-block-end: 0.75rem;
+}
+.article__content p {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+  line-height: 20px;
+}
+
+.article__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.article__footer .article__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.article__footer .article__author img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.article__footer .article__author-info h3 {
+  font-size: 0.8125rem;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.article__footer .article__author-info span {
+  font-size: 0.8125rem;
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+}
+
+.btn__share {
+  border-radius: 50%;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+}
+.btn__share--active {
+  background-color: hsl(214, 17%, 51%);
+}
+.btn__share--active svg path {
+  fill: hsl(210, 46%, 95%);
+}
+
+.article__share-container {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-block: 1.375rem;
+  padding-inline: 2rem;
+}
+.article__share-container .article__share-content {
+  display: flex;
+  gap: 1.25rem;
+}
+.article__share-container .article__share-content h4 {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 5px;
+}
+.article__share-container .article__share-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */

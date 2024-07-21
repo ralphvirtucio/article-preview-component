@@ -123,6 +123,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-block: 1.375rem;
+  padding-inline: 2rem;
 }
 .article__footer .article__author {
   display: flex;
@@ -164,8 +166,6 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-block: 1.375rem;
-  padding-inline: 2rem;
 }
 .article__share-container .article__share-content {
   display: flex;

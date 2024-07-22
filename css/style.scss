@@ -139,7 +139,6 @@ body {
   border-radius: 12px;
   margin-block-start: 4.625rem; 
   margin-block-end: 5.5625rem; 
-  overflow: hidden;
   max-width: 60rem;
   
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
@@ -167,10 +166,10 @@ body {
   }
 
   img {
-  border-radius: 12px;
-  
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
   @media screen and (min-width: map-get($breakpoints, "laptop")) {
-      border-top-left-radius: 12px;
       border-bottom-left-radius: 12px;
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
@@ -183,6 +182,8 @@ body {
   position: relative;
   z-index: 1;
   box-shadow: 0 8px 24px rgba(0,0,0, 0.15);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 
   @media screen and (min-width: map-get($breakpoints, "laptop")) {
     padding-inline: 2rem;
@@ -190,6 +191,9 @@ body {
     box-shadow: none;
     width: 27rem;
     position: static;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 12px;
   }
 }
 // FIRST APPROACH FOR IMAGE *************
@@ -273,6 +277,14 @@ body {
 
 
 // START SHARE BUTTON STYLES ************************
+
+.disclosure {
+  @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+    position: relative;
+  }
+}
+
+
 .disclosure__button {
   border-radius: 50%;
   border: none;
@@ -320,19 +332,22 @@ body {
   left: 0;
   top: 0;
   padding-inline: 2rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   
 
   @media screen and (min-width: map-get($breakpoints, 'laptop')) {
     position: absolute;
-    top: 210px;
-    left: 700px;
+    top: -80px;
+    left: -110px;
     right: 0;
     bottom: 0;
-    width: fit-content;
-    height: fit-content;
+    width: max-content;
+    height: max-content;
     padding-inline: 2.25rem;
     padding-block: 1.125rem;
     border-radius: 10px;
+
 
     &::after {
       content: "";
@@ -348,9 +363,6 @@ body {
     }
   }
 
-  @media screen and (min-width:map-get($breakpoints, 'desktop')) {
-    left: 905px;
-  }
 
 
   .article__share-content {

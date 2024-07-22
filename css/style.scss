@@ -16,6 +16,7 @@ $font-weight-700: 700;
 $breakpoints: (
   "tablet": 48em,
   "laptop": 64em,
+  "desktop": 90em,
 );
 
 
@@ -162,6 +163,7 @@ body {
     // transform: translate(70px, 0px);
     transform: translate(0px, 0px);
     width: 22rem;
+    position: static;
   }
 
   img {
@@ -187,6 +189,7 @@ body {
     padding-block-start: 2.5rem;
     box-shadow: none;
     width: 27rem;
+    position: static;
   }
 }
 // FIRST APPROACH FOR IMAGE *************
@@ -226,6 +229,7 @@ body {
   justify-content: space-between;
   padding-block: 1.375rem;
   padding-inline: 2rem;
+
 
   @media screen and (min-width: map-get($breakpoints, "laptop")) {
     padding-block-start: 1.25rem;
@@ -267,35 +271,34 @@ body {
 
 
 // START SHARE BUTTON STYLES ************************
-.btn__share {
+.disclosure__button {
   border-radius: 50%;
   border: none;
-  // background-color: $neutral-color-2;
-  // box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
+  cursor: pointer;
   width: 2rem;
   height: 2rem;
-
-#btn__share--active {
-  background-color: $primary-color-2;
-
-    svg path {
-      fill: $neutral-color-2;
-    }
-  }
-}
-
-#btn__share--unactive {
   background-color: $neutral-color-2;
 
+
+  &[aria-expanded="false"] {
+    + .disclosure__content {
+      display: none;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    + .disclosure__content {
+      display: flex;
+    }
+  }
+
 }
-
-
 
 // END SHARE BUTTON STYLES ************************
 
 
 // START SHARE CONTENT STYLES ****************************
-.article__share-container {
+.disclosure__content {
   background-color: $primary-color-1;
   display: flex;
   align-items: center;
@@ -303,11 +306,39 @@ body {
   width: 100%;
   
 
+  // @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+  //   position: absolute;
+  //   right: 71px;
+  //   bottom: 150px;
+  //   width: fit-content;
+  //   padding-inline: 2.25rem;
+  //   padding-block: 1.125rem;
+  //   border-radius: 10px;
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 50px;
+  //     left: 40%;
+  //     right: -50%;
+  //     width: 0;
+  //     border-top: 24px solid $primary-color-1;
+  //     border-left: 24px solid transparent;
+  //     border-bottom: 24px solid transparent;
+  //     border-right: 24px solid transparent;
+  //   }
+  // }
+
+  // @media screen and (min-width: map-get($breakpoints, 'desktop')) {
+  //     right: 282px;
+  //   }
 
 
   .article__share-content {
     display: flex;
     gap: 1.25rem;
+
+    
 
     h4 {
       font-size: $font-size-body;

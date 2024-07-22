@@ -286,6 +286,11 @@ body {
     border-right: 24px solid transparent;
   }
 }
+@media screen and (min-width: 90em) {
+  .disclosure__content {
+    left: 905px;
+  }
+}
 .disclosure__content .article__share-content {
   display: flex;
   gap: 1.25rem;

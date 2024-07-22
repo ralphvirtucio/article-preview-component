@@ -348,6 +348,10 @@ body {
     }
   }
 
+  @media screen and (min-width:map-get($breakpoints, 'desktop')) {
+    left: 905px;
+  }
+
 
   .article__share-content {
     display: flex;

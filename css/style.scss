@@ -141,7 +141,7 @@ body {
   margin-block-end: 5.5625rem; 
   overflow: hidden;
   max-width: 60rem;
-
+  
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     width: 40rem;
   }
@@ -229,12 +229,14 @@ body {
   justify-content: space-between;
   padding-block: 1.375rem;
   padding-inline: 2rem;
+  position: relative;
 
 
   @media screen and (min-width: map-get($breakpoints, "laptop")) {
     padding-block-start: 1.25rem;
     padding-block-end: 0px;
     padding-inline: 0px;
+    position: static;
   }
 
 
@@ -278,6 +280,9 @@ body {
   width: 2rem;
   height: 2rem;
   background-color: $neutral-color-2;
+  position: relative;
+  z-index: 2;
+
 
 
   &[aria-expanded="false"] {
@@ -287,6 +292,12 @@ body {
   }
 
   &[aria-expanded="true"] {
+    background-color: $primary-color-2;
+
+    svg path {
+      fill: #fff;
+    }
+
     + .disclosure__content {
       display: flex;
     }
@@ -303,35 +314,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
   width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-inline: 2rem;
   
 
-  // @media screen and (min-width: map-get($breakpoints, 'laptop')) {
-  //   position: absolute;
-  //   right: 71px;
-  //   bottom: 150px;
-  //   width: fit-content;
-  //   padding-inline: 2.25rem;
-  //   padding-block: 1.125rem;
-  //   border-radius: 10px;
+  @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+    position: absolute;
+    top: 210px;
+    left: 700px;
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    padding-inline: 2.25rem;
+    padding-block: 1.125rem;
+    border-radius: 10px;
 
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     top: 50px;
-  //     left: 40%;
-  //     right: -50%;
-  //     width: 0;
-  //     border-top: 24px solid $primary-color-1;
-  //     border-left: 24px solid transparent;
-  //     border-bottom: 24px solid transparent;
-  //     border-right: 24px solid transparent;
-  //   }
-  // }
-
-  // @media screen and (min-width: map-get($breakpoints, 'desktop')) {
-  //     right: 282px;
-  //   }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: 40%;
+      right: -50%;
+      width: 0;
+      border-top: 24px solid $primary-color-1;
+      border-left: 24px solid transparent;
+      border-bottom: 24px solid transparent;
+      border-right: 24px solid transparent;
+    }
+  }
 
 
   .article__share-content {
